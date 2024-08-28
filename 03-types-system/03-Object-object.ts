@@ -25,11 +25,11 @@ const o1: object = { foo: 123 };
 const o2: Object = { foo: 123 };
 
 o1.toString(); // ok
-// ts-error-warning => Property 'foo' does not exist on type 'object'.
+// ts-type-warning => Property 'foo' does not exist on type 'object'.
 // o1.foo; // error
 
 o2.toString(); // ok
-// ts-error-warning => Property 'foo' does not exist on type 'Object'.
+// ts-type-warning => Property 'foo' does not exist on type 'Object'.
 // o2.foo; // error
 
 /**

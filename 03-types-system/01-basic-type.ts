@@ -14,7 +14,7 @@ const num3: number = 0xff; // 255
 // bigint (ES2020)
 const big1: bigint = 100n;
 const big2: bigint = 0xfffn; // 255n
-// ts-error-warning => Type 'number' is not assignable to type 'bigint'.
+// ts-type-warning => Type 'number' is not assignable to type 'bigint'.
 // const big3: bigint = 123;// error
 
 // symbol (ES2015)

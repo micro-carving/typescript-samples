@@ -14,7 +14,7 @@ console.log(typeof array);
 
 const array2 = [123];
 
-// ts-error-warning => Argument of type 'string' is not assignable to parameter of type 'number'.
+// ts-type-warning => Argument of type 'string' is not assignable to parameter of type 'number'.
 // array2.push('hello');// error
 
 /**

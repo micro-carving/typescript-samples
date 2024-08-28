@@ -2,7 +2,7 @@ let hello: 'hello';
 
 hello = 'hello'; // ok
 
-// ts-error-warning: Type '"hi"' is not assignable to type '"hello"'.
+// ts-type-warning: Type '"hi"' is not assignable to type '"hello"'.
 // hello = 'hi'; // error
 
 // next-line value type is 'https', not string
@@ -16,7 +16,7 @@ console.log(typeof http); // string
 const vx = { foo: 1 }
 vx.foo; // number
 
-// ts-error-warning: Type '5' is not assignable to type 'number'.
+// ts-type-warning: Type '5' is not assignable to type 'number'.
 // 5 is subtype of number, but number is parent-type of 5, parent-type can't be assigned to subtype
 // const vn: 5 = 4 + 1; // error
 

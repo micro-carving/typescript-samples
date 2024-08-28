@@ -24,11 +24,11 @@ if (typeof t1 === 'number') {
 }
 
 type T2 = typeof Date; // Date
-// ts-error-warning => 'Date' refers to a value, but is being used as a type here.
+// ts-type-warning => 'Date' refers to a value, but is being used as a type here.
 // type T3 = typeof Date();// error
 
 type T4 = number;
-// ts-error-warning => 'T4' only refers to a type, but is being used as a value here.
+// ts-type-warning => 'T4' only refers to a type, but is being used as a value here.
 // type T5 = typeof T4; // error
 
 /**

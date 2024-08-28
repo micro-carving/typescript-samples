@@ -7,27 +7,27 @@ a = true; // ok
 let a1: unknown = 10; // ok
 
 // unknown is a type-safe version of any.
-// ts-error-warning => Type 'unknown' is not assignable to type 'boolean'.
+// ts-type-warning => Type 'unknown' is not assignable to type 'boolean'.
 // let a2:boolean = a1; // error
 
-// ts-error-warning => Type 'unknown' is not assignable to type 'number'.
+// ts-type-warning => Type 'unknown' is not assignable to type 'number'.
 // let a3:number = a1; // error
 
 let f1: unknown = { foo: 123 };
-// ts-error-warning => 'f1' is of type 'unknown'.
+// ts-type-warning => 'f1' is of type 'unknown'.
 // f1.foo; // error
 
 let str1: unknown = 'hello';
-// ts-error-warning => 'str1' is of type 'unknown'.
+// ts-type-warning => 'str1' is of type 'unknown'.
 // str1.trim(); // error
 
 let fun1: unknown = (n = 0) => n + 1; // ok
-// ts-error-warning => 'fun1' is of type 'unknown'.
+// ts-type-warning => 'fun1' is of type 'unknown'.
 // fun1(1); // error
 
 // unknown operator
 let o1: unknown = 1;
-// ts-error-warning => 'o1' is of type 'unknown'.
+// ts-type-warning => 'o1' is of type 'unknown'.
 // o1 + 1; // error
 
 // ==, ===, !==, !=, ||, &&, ??, !, typeof, instanceof

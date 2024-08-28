@@ -8,9 +8,9 @@ let age: number = 18;
 // age.toString();
 
 // tsconfig.json (strictNullChecks = true)
-// ts-error-warning => Type 'null' is not assignable to type 'number'.
+// ts-type-warning => Type 'null' is not assignable to type 'number'.
 // age = null; // error
-// ts-error-warning => Type 'undefined' is not assignable to type 'number'.
+// ts-type-warning => Type 'undefined' is not assignable to type 'number'.
 // age = undefined; // error
 
 let nu: any = undefined; // ok

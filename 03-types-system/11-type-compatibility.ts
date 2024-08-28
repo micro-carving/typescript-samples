@@ -7,7 +7,7 @@ let hi:'hi' = 'hi';
 let hb:string = 'hello';
 
 hb = hi; // ok
-// ts-error-warning => Type 'string' is not assignable to type '"hi"'.
+// ts-type-warning => Type 'string' is not assignable to type '"hi"'.
 // hi = hb; // error
 
 /**

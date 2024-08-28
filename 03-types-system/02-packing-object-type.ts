@@ -20,7 +20,7 @@ console.log(s1 === s2); // false
 const s3: String = 'hello'; // ok
 const s4: String = new String('hello'); // ok
 const s5: string = 'hello'; // ok
-// ts-error-warning => Type 'String' is not assignable to type 'string'. 'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
+// ts-type-warning => Type 'String' is not assignable to type 'string'. 'string' is a primitive, but 'String' is a wrapper object. Prefer using 'string' when possible.
 // const s6: string = new String('hello'); // error
 
 const os = Object(Symbol('foo'));

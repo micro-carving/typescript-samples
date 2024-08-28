@@ -4,36 +4,36 @@ a1[0] = 2;
 
 const a2: readonly number[] = [0, 1];
 
-// ts-error-warning => Index signature in type 'readonly number[]' only permits reading.
+// ts-type-warning => Index signature in type 'readonly number[]' only permits reading.
 // a2[0] = 2; // error
 
-// ts-error-warning => Property 'push' does not exist on type 'readonly number[]'.
+// ts-type-warning => Property 'push' does not exist on type 'readonly number[]'.
 // a2.push(2); // error
 
-// ts-error-warning => Index signature in type 'readonly number[]' only permits reading.
+// ts-type-warning => Index signature in type 'readonly number[]' only permits reading.
 // delete a2[0]; // error
 
 let a3: number[] = [0, 1];
 let a4: readonly number[] = a3; // ok
 
-// ts-error-warning => The type 'readonly number[]' is 'readonly' and cannot be assigned to the mutable type 'number[]'.
+// ts-type-warning => The type 'readonly number[]' is 'readonly' and cannot be assigned to the mutable type 'number[]'.
 // a3 = a4; // error
 
 function getSum(s: number[]) {
 
 }
 
-// ts-error-warning => Argument of type 'readonly number[]' is not assignable to parameter of type 'number[]'. The type 'readonly number[]' is 'readonly' and cannot be assigned to the mutable type 'number[]'.
+// ts-type-warning => Argument of type 'readonly number[]' is not assignable to parameter of type 'number[]'. The type 'readonly number[]' is 'readonly' and cannot be assigned to the mutable type 'number[]'.
 // getSum(a2); // error
 
-// ts-error-warning => 'readonly' type modifier is only permitted on array and tuple literal types.
+// ts-type-warning => 'readonly' type modifier is only permitted on array and tuple literal types.
 // const a5: readonly Array<number> = [0, 1]; // error
 
 const a6: ReadonlyArray<number> = [0, 1]; // ok
 const a7: Readonly<number[]> = [0, 1]; // ok
 
 const a8 = [0, 1] as const;
-// ts-error-warning => Cannot assign to '0' because it is a read-only property.
+// ts-type-warning => Cannot assign to '0' because it is a read-only property.
 // a8[0] = 2; // error
 
 /**

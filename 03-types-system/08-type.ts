@@ -3,7 +3,7 @@ type Age = number;
 let ag: Age = 25;
 
 type Color = 'red';
-// ts-error-warning => Duplicate identifier 'Color'.
+// ts-type-warning => Duplicate identifier 'Color'.
 // type Color = 'blue'; // error
 
 if (Math.random() > 0.5) {
