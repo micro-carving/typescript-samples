@@ -5,7 +5,7 @@ function joinNumbers(...nus: number[]) {}
 function joinUsers(...users: [boolean, string]) {}
 
 // rest parameter is tuple with optional element
-function rpFun(...args: [boolean, string?]) {}
+function rpoFun(...args: [boolean, string?]) {}
 
 function rpMultiply(n: number, ...m: number[]) {
   return m.map((m) => m * n);
